@@ -1,0 +1,17 @@
+version: '3.8'
+services: 
+
+    mariadb:
+      image: mariadb:latest
+      container_name: mariadb
+      restart: unless-stopped
+      environment:
+        MARIADB_ROOT_PASSWORD: password
+
+
+    adminer:
+      image: adminer
+      restart: always
+      ports:
+      
+        - 8080:8080 
